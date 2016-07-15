@@ -56,7 +56,7 @@ class DeviceDataCollectorTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->mobileDetector = $this->getMockBuilder('SunCat\MobileDetectBundle\DeviceDetector\MobileDetector')->disableOriginalConstructor()->getMock();
+        $this->mobileDetector = $this->getMock('SunCat\MobileDetectBundle\DeviceDetector\DeviceDetectorInterface');
         $this->request = $this->getMockBuilder('Symfony\Component\HttpFoundation\Request')->getMock();
         $this->request->query = new ParameterBag();
         $this->request->cookies = new ParameterBag();

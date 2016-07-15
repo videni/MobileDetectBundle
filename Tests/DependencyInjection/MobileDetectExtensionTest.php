@@ -67,10 +67,7 @@ class MobileDetectExtensionTest extends PHPUnit_Framework_TestCase
             $this->container->getParameter('mobile_detect.cookie_expire_datetime_modifier')
         );
         $this->assertEquals(DeviceView::SWITCH_PARAM_DEFAULT, $this->container->getParameter('mobile_detect.switch_param'));
-        $this->assertEquals(
-            'SunCat\MobileDetectBundle\DeviceDetector\MobileDetector',
-            $this->container->getParameter('mobile_detect.mobile_detector.class')
-        );
+       
         $this->assertEquals(
             'SunCat\MobileDetectBundle\Helper\DeviceView',
             $this->container->getParameter('mobile_detect.device_view.class')

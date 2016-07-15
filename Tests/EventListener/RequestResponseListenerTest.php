@@ -64,7 +64,7 @@ class RequestResponseListenerTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->mobileDetector = $this->getMockBuilder('SunCat\MobileDetectBundle\DeviceDetector\MobileDetector')->disableOriginalConstructor()->getMock();
+        $this->mobileDetector = $this->getMock('SunCat\MobileDetectBundle\DeviceDetector\DeviceDetectorInterface');
         $this->deviceView = $this->getMockBuilder('SunCat\MobileDetectBundle\Helper\DeviceView')->disableOriginalConstructor()->getMock();
         $this->router = $this->getMockBuilder('Symfony\Bundle\FrameworkBundle\Routing\Router')
             ->disableOriginalConstructor()

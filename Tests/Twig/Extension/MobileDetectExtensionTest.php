@@ -46,7 +46,7 @@ class MobileDetectExtensionTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->mobileDetector = $this->getMockBuilder('SunCat\MobileDetectBundle\DeviceDetector\MobileDetector')->disableOriginalConstructor()->getMock();
+        $this->mobileDetector = $this->getMock('SunCat\MobileDetectBundle\DeviceDetector\DeviceDetectorInterface');
         $this->requestStack = $this->getMockBuilder('Symfony\Component\HttpFoundation\RequestStack')->disableOriginalConstructor()->getMock();
 
         $this->request = $this->getMockBuilder('Symfony\Component\HttpFoundation\Request')->getMock();
